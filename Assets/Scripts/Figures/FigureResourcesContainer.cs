@@ -30,14 +30,14 @@ namespace Figures
             return true;
         }
 
-        public Sprite GetFigureSprite(FigureType figureType)
+        public Sprite GetFigureSprite(ShapeType shapeType)
         {
-            return figureSpritesContainers.FirstOrDefault(x => x.figureType == figureType).sprite;
+            return figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType).sprite;
         }
 
-        public bool TryGetFigureSprite(FigureType figureType, out Sprite figureSprite)
+        public bool TryGetFigureSprite(ShapeType shapeType, out Sprite figureSprite)
         {
-            var figureSpritesContainer = figureSpritesContainers.FirstOrDefault(x => x.figureType == figureType);
+            var figureSpritesContainer = figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType);
 
             if (figureSpritesContainer == null)
             {

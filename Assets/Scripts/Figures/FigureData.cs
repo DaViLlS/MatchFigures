@@ -6,7 +6,7 @@ namespace Figures
     [Serializable]
     public class FigureData
     {
-        public FigureType figureType;
+        public ShapeType shapeType;
         public AnimalType animalType;
         public Color colorType;
     }

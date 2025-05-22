@@ -1,6 +1,6 @@
 namespace Figures
 {
-    public enum FigureType
+    public enum ShapeType
     {
         Triangle,
         Square,

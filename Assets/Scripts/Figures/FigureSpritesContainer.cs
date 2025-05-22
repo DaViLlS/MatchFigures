@@ -6,7 +6,7 @@ namespace Figures
     [Serializable]
     public class FigureSpritesContainer
     {
-        public FigureType figureType;
+        public ShapeType shapeType;
         public Sprite sprite;
     }
 }
