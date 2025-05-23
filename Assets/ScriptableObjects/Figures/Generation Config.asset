@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41adedd8ed1e4fc2a666214d46c9c307, type: 3}
   m_Name: Generation Config
   m_EditorClassIdentifier: 
-  figuresCount: 49
+  figuresCount: 39

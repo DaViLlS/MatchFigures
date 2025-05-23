@@ -5,35 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b68a8ff-3e2d-44a7-be69-86d87888281e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresRegistry.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresRegistry.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation/FiguresGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/SimpleFigure.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/SimpleFigure.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchFigures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchFigures/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Circle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Circle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/SimpleFigure.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/SimpleFigure.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Square.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Square.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Triangle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Triangle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/cat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/cat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/cow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/cow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/dog.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/dog.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/FigureResourcesContainer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/FigureResourcesContainer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/FiguresConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/FiguresConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/AnimalSpritesContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/AnimalSpritesContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/AnimalSpritesContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/AnimalSpritesContainer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/AnimalType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/AnimalType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/AnimalType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/AnimalType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/Generation Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/Generation Config.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/Figure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Figure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureResourcesContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureResourcesContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureSpritesContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/ShapesContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureSpritesContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/ShapesContainer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresViewConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresViewConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/ShapeType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/ShapeType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/ShapeType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FigureStructure/ShapeType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FiguresGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FiguresGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation/FiguresGenerator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation/GenerationConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GenerationConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation/GenerationConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation/FiguresGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Generation/FiguresGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747888665661</updated>
       <workItem from="1747888681261" duration="4515000" />
-      <workItem from="1747978337666" duration="10234000" />
+      <workItem from="1747978337666" duration="11456000" />
     </task>
     <servers />
   </component>
