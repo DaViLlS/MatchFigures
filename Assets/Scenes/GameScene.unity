@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05667e591044581822d61ca7e77b861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  figuresManager: {fileID: 0}
+  figuresManager: {fileID: 164195359}
   maxFiguresCount: 7
 --- !u!4 &411176368
 Transform:
@@ -6063,6 +6063,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93026c4714bf4da39ec721fd39d4f2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  figurePositions:
+  - {fileID: 722891981}
+  - {fileID: 1420926741}
+  - {fileID: 463404676}
+  - {fileID: 775330857}
+  - {fileID: 2131591552}
+  - {fileID: 1995911911}
+  - {fileID: 1603097096}
   figuresCounter: {fileID: 411176367}
   failureWindow: {fileID: 662548579}
   victoryWindow: {fileID: 1316961398}

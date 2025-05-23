@@ -25,11 +25,12 @@ namespace Figures
         {
             _figuresCounter = new Dictionary<string, int>();
             _figures = new Dictionary<string, List<Figure>>();
+            
+            figuresManager.OnFigureGenerated += IncreaseFiguresCount;
         }
 
         private void Start()
         {
-            figuresManager.OnFigureGenerated += IncreaseFiguresCount;
             FigureClickObserver.Instance.FigureClicked += HandleFigureClick;
         }
 
@@ -63,15 +64,15 @@ namespace Figures
                 OnFiguresMatched?.Invoke(figure.Id);
             }
             
-            if (_clickedFiguresCount > 7)
-            {
-                OnFailure?.Invoke();
-                return;
-            }
-            
             if (_currentFiguresCount <= 0)
             {
                 OnVictory?.Invoke();
+                return;
+            }
+            
+            if (_clickedFiguresCount >= 7)
+            {
+                OnFailure?.Invoke();
             }
         }
     }
