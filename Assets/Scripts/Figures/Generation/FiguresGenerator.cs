@@ -6,6 +6,8 @@ namespace Figures.Generation
 {
     public class FiguresGenerator : MonoBehaviour
     {
+        private const int FiguresMultiply = 3;
+        
         [SerializeField] private FiguresRegistry figuresRegistry;
         [SerializeField] private GenerationConfig generationConfig;
         [SerializeField] private FiguresViewConfig figuresViewConfig;
@@ -15,6 +17,8 @@ namespace Figures.Generation
 
         private Dictionary<string, FigureData> _figuresData;
         private Dictionary<string, int> _figuresCount;
+
+        private int _figuresCountToCreate;
 
         private void Awake()
         {
@@ -37,11 +41,33 @@ namespace Figures.Generation
                 _figuresData.Add(id, figureData);
                 _figuresCount.Add(id, 0);
             }
+
+            CalculateAccurateFiguresCount();
+            
+        }
+
+        private void CalculateAccurateFiguresCount()
+        {
+            var figuresViewLength = figuresViewConfig.Figures.Length;
+            _figuresCountToCreate = figuresViewLength * FiguresMultiply;
+
+            if (_figuresCountToCreate > generationConfig.ApproximateFiguresCount)
+            {
+                var difference = _figuresCountToCreate - generationConfig.ApproximateFiguresCount;
+                figuresViewLength -= (difference % FiguresMultiply) * FiguresMultiply;
+                _figuresCountToCreate = figuresViewLength * FiguresMultiply;
+            }
+            else if (_figuresCountToCreate < generationConfig.ApproximateFiguresCount)
+            {
+                var difference = generationConfig.ApproximateFiguresCount - _figuresCountToCreate;
+                figuresViewLength += (difference % FiguresMultiply) * FiguresMultiply;
+                _figuresCountToCreate = figuresViewLength * FiguresMultiply;
+            }
         }
 
         private void GenerateFigures()
         {
-            for (var i = 0; i < generationConfig.FiguresCount; i++)
+            for (var i = 0; i < generationConfig.ApproximateFiguresCount; i++)
             {
                 var id = GetRandomFigureId();
                 var figureData = _figuresData[id];
