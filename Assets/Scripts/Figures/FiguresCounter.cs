@@ -6,9 +6,9 @@ namespace Figures
 {
     public class FiguresCounter : MonoBehaviour
     {
-        public event Action OnFiguresChanged;
+        public event Action<Figure> OnFiguresChanged;
         public event Action OnFailure;
-        public event Action OnFiguresMatched;
+        public event Action<string> OnFiguresMatched;
         
         [SerializeField] private int maxFiguresCount;
 
@@ -23,10 +23,19 @@ namespace Figures
             _figures = new Dictionary<string, List<Figure>>();
         }
 
+        private void Start()
+        {
+            FigureClickObserver.Instance.FigureClicked += HandleFigureClick;
+        }
+
         private void HandleFigureClick(Figure figure)
         {
             _currentFiguresCount++;
-            _figuresCounter[figure.Id]++;
+
+            if (!_figuresCounter.TryAdd(figure.Id, 1))
+            {
+                _figuresCounter[figure.Id]++;
+            }
 
             if (!_figures.ContainsKey(figure.Id))
             {
@@ -35,13 +44,13 @@ namespace Figures
             
             _figures[figure.Id].Add(figure);
             
-            OnFiguresChanged?.Invoke();
+            OnFiguresChanged?.Invoke(figure);
 
             if (_figuresCounter[figure.Id] == 3)
             {
                 _figuresCounter[figure.Id] = 0;
                 _currentFiguresCount -= 3;
-                OnFiguresMatched?.Invoke();
+                OnFiguresMatched?.Invoke(figure.Id);
             }
 
             if (_currentFiguresCount >= 7)

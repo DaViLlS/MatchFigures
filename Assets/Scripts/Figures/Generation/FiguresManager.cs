@@ -1,23 +1,29 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Figures.FigureStructure;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Figures.Generation
 {
-    public class FiguresGenerator : MonoBehaviour
+    public class FiguresManager : MonoBehaviour
     {
+        public event Action<Figure> OnFigureGenerated;
+        
         private const int FiguresMultiply = 3;
         
         [SerializeField] private FiguresRegistry figuresRegistry;
         [SerializeField] private GenerationConfig generationConfig;
         [SerializeField] private FiguresViewConfig figuresViewConfig;
         [SerializeField] private FigureResourcesContainer figureResourcesContainer;
+        [SerializeField] private FiguresCounter figuresCounter;
         [SerializeField] private Transform figuresRoot;
         [SerializeField] private float spawnOffset;
 
         private Dictionary<string, FigureData> _figuresData;
         private Dictionary<string, int> _figuresCount;
+        private List<Figure> _figures;
 
         private int _figuresCountToCreate;
         private bool _figuresSetupDone;
@@ -26,12 +32,15 @@ namespace Figures.Generation
         {
             _figuresData = new Dictionary<string, FigureData>();
             _figuresCount = new Dictionary<string, int>();
+            _figures = new List<Figure>();
         }
 
         private void Start()
         {
             InitFigures();
             GenerateFigures();
+
+            figuresCounter.OnFailure += DestroyFigures;
         }
 
         private void InitFigures()
@@ -113,7 +122,10 @@ namespace Figures.Generation
                 var figure = figurePrototype.Clone();
                 figure.transform.SetParent(shape.transform);
                 figure.transform.localPosition = Vector3.zero;
-                figure.Setup(id, animalSprite, shape.GetComponent<Shape>());
+                figure.Setup(id, animalSprite,  shape.GetComponent<Shape>());
+                
+                _figures.Add(figure);
+                OnFigureGenerated?.Invoke(figure);
             }
         }
 
@@ -121,6 +133,21 @@ namespace Figures.Generation
         {
             var randomIndex = Random.Range(0, _figuresData.Count);
             return _figuresData.Keys.ToList()[randomIndex];
+        }
+        
+        private void DestroyFigures()
+        {
+            foreach (var figure in _figures)
+            {
+                Destroy(figure.gameObject);
+            }
+            
+            _figures.Clear();
+        }
+
+        private void OnDestroy()
+        {
+            figuresCounter.OnFailure -= DestroyFigures;
         }
     }
 }

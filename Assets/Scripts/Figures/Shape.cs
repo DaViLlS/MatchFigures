@@ -1,14 +1,20 @@
-﻿using Input;
+﻿using System;
 using UnityEngine;
 
 namespace Figures
 {
     public class Shape : MonoBehaviour
     {
-        [SerializeField] private FigureClickHandler figureClickHandler;
+        public event Action OnClick;
+        
         [SerializeField] private SpriteRenderer spriteRenderer;
         
-        public FigureClickHandler FigureClickHandler => figureClickHandler;
         public SpriteRenderer SpriteRenderer => spriteRenderer;
+        
+        private void OnMouseUpAsButton()
+        {
+            OnClick?.Invoke();
+            Destroy(gameObject);
+        }
     }
 }
