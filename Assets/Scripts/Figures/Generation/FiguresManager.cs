@@ -123,10 +123,16 @@ namespace Figures.Generation
                 figure.transform.SetParent(shape.transform);
                 figure.transform.localPosition = Vector3.zero;
                 figure.Setup(id, animalSprite,  shape.GetComponent<Shape>());
+                figure.OnClick += RemoveFigureFromList;
                 
                 _figures.Add(figure);
                 OnFigureGenerated?.Invoke(figure);
             }
+        }
+
+        private void RemoveFigureFromList(Figure figure)
+        {
+            _figures.Remove(figure);
         }
 
         private string GetRandomFigureId()
@@ -139,7 +145,7 @@ namespace Figures.Generation
         {
             foreach (var figure in _figures)
             {
-                Destroy(figure.gameObject);
+                figure.DestroyFigure();
             }
             
             _figures.Clear();

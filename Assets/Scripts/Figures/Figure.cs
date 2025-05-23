@@ -36,6 +36,11 @@ namespace Figures
             OnClick?.Invoke(this);
         }
 
+        public void DestroyFigure()
+        {
+            Destroy(_shape.gameObject);
+        }
+
         public abstract Figure Clone();
     }
 }

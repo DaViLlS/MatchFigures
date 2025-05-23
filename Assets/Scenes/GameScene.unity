@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 164195358}
   - component: {fileID: 164195359}
   m_Layer: 0
-  m_Name: FiguresGenerator
+  m_Name: FiguresManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91bf42d65b448328ae7ab40a17a8aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  figuresManager: {fileID: 0}
+  figuresManager: {fileID: 164195359}
 --- !u!1 &322332301
 GameObject:
   m_ObjectHideFlags: 0
