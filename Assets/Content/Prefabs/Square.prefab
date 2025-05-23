@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3505858104234468628}
   - component: {fileID: 4231917507827910810}
   - component: {fileID: 3927611535379138400}
+  - component: {fileID: -980698537181833001}
+  - component: {fileID: 7551245732418335530}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -162,3 +164,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-980698537181833001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177622835403625939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bb00cd668e4619865ee3241ad503ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  figureClickHandler: {fileID: 7551245732418335530}
+--- !u!114 &7551245732418335530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177622835403625939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125d4ecf29c64fd6a79709dd40140a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

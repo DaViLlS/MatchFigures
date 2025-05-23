@@ -19,6 +19,7 @@ namespace Figures.Generation
         private Dictionary<string, int> _figuresCount;
 
         private int _figuresCountToCreate;
+        private bool _figuresSetupDone;
 
         private void Awake()
         {
@@ -43,9 +44,9 @@ namespace Figures.Generation
             }
 
             CalculateAccurateFiguresCount();
-            
+            SetupIndividualFiguresCount();
         }
-
+        
         private void CalculateAccurateFiguresCount()
         {
             var figuresViewLength = figuresViewConfig.Figures.Length;
@@ -65,11 +66,38 @@ namespace Figures.Generation
             }
         }
 
-        private void GenerateFigures()
+        private void SetupIndividualFiguresCount()
         {
-            for (var i = 0; i < generationConfig.ApproximateFiguresCount; i++)
+            var count = 0;
+            var duplicateFiguresCount = _figuresCount.ToDictionary(fig => fig.Key, fig => fig.Value);
+            
+            foreach (var figureId in duplicateFiguresCount.Keys)
+            {
+                _figuresCount[figureId] = 3;
+                count += 3;
+            }
+
+            while (count < _figuresCountToCreate)
             {
                 var id = GetRandomFigureId();
+                _figuresCount[id] = 3;
+                count += 3;
+            }
+        }
+
+        private void GenerateFigures()
+        {
+            for (var i = 0; i < _figuresCountToCreate; i++)
+            {
+                var id = GetRandomFigureId();
+
+                if (_figuresCount[id] == 0)
+                {
+                    id = _figuresCount.Keys.First(x => _figuresCount[x] > 0);
+                }
+                
+                _figuresCount[id]--;
+                
                 var figureData = _figuresData[id];
                 var animalSprite = figureResourcesContainer.GetAnimalSprite(figureData.animalType);
                 var shapePrefab = figureResourcesContainer.GetFigureShape(figureData.shapeType);
@@ -84,7 +112,7 @@ namespace Figures.Generation
                 var figure = figurePrototype.Clone();
                 figure.transform.SetParent(shape.transform);
                 figure.transform.localPosition = Vector3.zero;
-                figure.Setup(id, animalSprite);
+                figure.Setup(id, animalSprite, shape.GetComponent<Shape>());
             }
         }
 

@@ -8,7 +8,7 @@ namespace Figures
     [CreateAssetMenu(menuName = "Game/FigureResourcesContainer", fileName = "FigureResourcesContainer", order = 0)]
     public class FigureResourcesContainer : ScriptableObject
     {
-        [SerializeField] private List<ShapesContainer> figureSpritesContainers;
+        [SerializeField] private List<ShapesContainer> figureShapesContainers;
         [SerializeField] private List<AnimalSpritesContainer> animalSpritesContainers;
 
         public Sprite GetAnimalSprite(AnimalType animalType)
@@ -33,12 +33,12 @@ namespace Figures
 
         public GameObject GetFigureShape(ShapeType shapeType)
         {
-            return figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType).shapePrefab;
+            return figureShapesContainers.FirstOrDefault(x => x.shapeType == shapeType).shapePrefab;
         }
 
         public bool TryGetFigureShape(ShapeType shapeType, out GameObject shapePrefab)
         {
-            var figureSpritesContainer = figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType);
+            var figureSpritesContainer = figureShapesContainers.FirstOrDefault(x => x.shapeType == shapeType);
 
             if (figureSpritesContainer == null)
             {

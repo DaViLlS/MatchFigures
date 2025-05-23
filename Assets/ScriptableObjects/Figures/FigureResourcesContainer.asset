@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc31f77a89b949e0ae1db7b292005038, type: 3}
   m_Name: FigureResourcesContainer
   m_EditorClassIdentifier: 
-  figureSpritesContainers:
+  figureShapesContainers:
   - shapeType: 0
     shapePrefab: {fileID: 1391473793062059012, guid: d379e785843012949ae018b454df0401, type: 3}
   - shapeType: 1
