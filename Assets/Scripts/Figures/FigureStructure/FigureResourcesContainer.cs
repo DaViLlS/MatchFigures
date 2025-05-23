@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Figures.FigureStructure;
 using UnityEngine;
 
-namespace Figures
+namespace Figures.FigureStructure
 {
     [CreateAssetMenu(menuName = "Game/FigureResourcesContainer", fileName = "FigureResourcesContainer", order = 0)]
     public class FigureResourcesContainer : ScriptableObject
@@ -18,7 +17,6 @@ namespace Figures
 
         public bool TryGetAnimalSprite(AnimalType animalType, out Sprite animalSprite)
         {
-            
             var animalSpritesContainer = animalSpritesContainers.FirstOrDefault(x => x.animalType == animalType);
 
             if (animalSpritesContainer == null)

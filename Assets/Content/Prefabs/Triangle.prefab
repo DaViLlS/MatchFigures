@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   figureClickHandler: {fileID: -3972994803500629055}
+  spriteRenderer: {fileID: 8983227598967934186}
 --- !u!114 &-3972994803500629055
 MonoBehaviour:
   m_ObjectHideFlags: 0
