@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Figures;
 using Figures.Ui;
 using UnityEngine;
@@ -10,6 +9,7 @@ namespace UI
     {
         [SerializeField] private FiguresCounter figuresCounter;
         [SerializeField] private GameObject failureWindow;
+        [SerializeField] private GameObject victoryWindow;
         
         private Dictionary<FigureUiView, string> _figuresUiViews;
         private List<FigureUiView> _figuresToRemove;
@@ -20,7 +20,8 @@ namespace UI
             _figuresUiViews = new Dictionary<FigureUiView, string>();
             figuresCounter.OnFiguresChanged += FiguresChanged;
             figuresCounter.OnFiguresMatched += FiguresMatched;
-            figuresCounter.OnFailure += Failure;
+            figuresCounter.OnVictory += ShowVictoryWindow;
+            figuresCounter.OnFailure += ShowFailureWindow;
         }
 
         private void FiguresChanged(Figure figure)
@@ -50,7 +51,13 @@ namespace UI
             _figuresToRemove.Clear();
         }
         
-        private void Failure()
+        private void ShowVictoryWindow()
+        {
+            ClearUiViews();
+            victoryWindow.SetActive(true);
+        }
+        
+        private void ShowFailureWindow()
         {
             ClearUiViews();
             failureWindow.SetActive(true);

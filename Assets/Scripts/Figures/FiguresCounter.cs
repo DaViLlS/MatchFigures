@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Figures.Generation;
 using UnityEngine;
 
 namespace Figures
@@ -7,12 +8,15 @@ namespace Figures
     public class FiguresCounter : MonoBehaviour
     {
         public event Action<Figure> OnFiguresChanged;
+        public event Action OnVictory;
         public event Action OnFailure;
         public event Action<string> OnFiguresMatched;
         
+        [SerializeField] private FiguresManager figuresManager;
         [SerializeField] private int maxFiguresCount;
 
         private int _currentFiguresCount;
+        private int _clickedFiguresCount;
         
         private Dictionary<string, int> _figuresCounter;
         private Dictionary<string, List<Figure>> _figures;
@@ -25,12 +29,18 @@ namespace Figures
 
         private void Start()
         {
+            figuresManager.OnFigureGenerated += IncreaseFiguresCount;
             FigureClickObserver.Instance.FigureClicked += HandleFigureClick;
+        }
+
+        private void IncreaseFiguresCount(Figure figure)
+        {
+            _currentFiguresCount++;
         }
 
         private void HandleFigureClick(Figure figure)
         {
-            _currentFiguresCount++;
+            _clickedFiguresCount++;
 
             if (!_figuresCounter.TryAdd(figure.Id, 1))
             {
@@ -49,14 +59,19 @@ namespace Figures
             if (_figuresCounter[figure.Id] == 3)
             {
                 _figuresCounter[figure.Id] = 0;
-                _currentFiguresCount -= 3;
+                _clickedFiguresCount -= 3;
                 OnFiguresMatched?.Invoke(figure.Id);
             }
-
-            if (_currentFiguresCount >= 7)
+            
+            if (_clickedFiguresCount > 7)
             {
-                Debug.Log("Поражение");
                 OnFailure?.Invoke();
+                return;
+            }
+            
+            if (_currentFiguresCount <= 0)
+            {
+                OnVictory?.Invoke();
             }
         }
     }
