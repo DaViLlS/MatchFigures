@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: FigureResourcesContainer
   m_EditorClassIdentifier: 
   figureSpritesContainers:
-  - figureType: 0
-    sprite: {fileID: 0}
-  - figureType: 1
-    sprite: {fileID: 0}
-  - figureType: 2
-    sprite: {fileID: 0}
+  - shapeType: 0
+    shapePrefab: {fileID: 1391473793062059012, guid: d379e785843012949ae018b454df0401, type: 3}
+  - shapeType: 1
+    shapePrefab: {fileID: 1177622835403625939, guid: e2a1935af79c5ec42b4f0b3a29c9cd50, type: 3}
+  - shapeType: 2
+    shapePrefab: {fileID: 4134136947081734736, guid: 32836be14e0893949b1abe9068ff9615, type: 3}
   animalSpritesContainers:
   - animalType: 0
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 6c02e489337d9a54c971664dea737419, type: 3}
   - animalType: 1
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: c53708bbd57851d4daf4d7ae21cf52d2, type: 3}
   - animalType: 2
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 04eb1f29503d5534286ad8082d0a0af1, type: 3}

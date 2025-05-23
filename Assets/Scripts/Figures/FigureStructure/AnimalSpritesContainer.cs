@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Figures
+namespace Figures.FigureStructure
 {
     [Serializable]
     public class AnimalSpritesContainer

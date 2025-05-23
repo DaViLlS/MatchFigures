@@ -1,4 +1,4 @@
-namespace Figures
+namespace Figures.FigureStructure
 {
     public enum AnimalType
     {

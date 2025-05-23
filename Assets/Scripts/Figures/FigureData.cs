@@ -1,4 +1,5 @@
 ﻿using System;
+using Figures.FigureStructure;
 using UnityEngine;
 
 namespace Figures

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Figures.FigureStructure;
 using UnityEngine;
 
 namespace Figures
@@ -7,7 +8,7 @@ namespace Figures
     [CreateAssetMenu(menuName = "Game/FigureResourcesContainer", fileName = "FigureResourcesContainer", order = 0)]
     public class FigureResourcesContainer : ScriptableObject
     {
-        [SerializeField] private List<FigureSpritesContainer> figureSpritesContainers;
+        [SerializeField] private List<ShapesContainer> figureSpritesContainers;
         [SerializeField] private List<AnimalSpritesContainer> animalSpritesContainers;
 
         public Sprite GetAnimalSprite(AnimalType animalType)
@@ -30,22 +31,22 @@ namespace Figures
             return true;
         }
 
-        public Sprite GetFigureSprite(ShapeType shapeType)
+        public GameObject GetFigureShape(ShapeType shapeType)
         {
-            return figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType).sprite;
+            return figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType).shapePrefab;
         }
 
-        public bool TryGetFigureSprite(ShapeType shapeType, out Sprite figureSprite)
+        public bool TryGetFigureShape(ShapeType shapeType, out GameObject shapePrefab)
         {
             var figureSpritesContainer = figureSpritesContainers.FirstOrDefault(x => x.shapeType == shapeType);
 
             if (figureSpritesContainer == null)
             {
-                figureSprite = null;
+                shapePrefab = null;
                 return false;
             }
             
-            figureSprite = figureSpritesContainer.sprite;
+            shapePrefab = figureSpritesContainer.shapePrefab;
             return true;
         }
     }

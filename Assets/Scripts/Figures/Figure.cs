@@ -2,20 +2,21 @@ using UnityEngine;
 
 namespace Figures
 {
-    public class Figure : MonoBehaviour
+    public abstract class Figure : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer figureShape;
         [SerializeField] private SpriteRenderer animal;
-        [SerializeField] private SpriteRenderer frame;
         
         public string Id { get; private set; }
 
-        public void Setup(string id, Sprite shapeSprite, Sprite animalSprite, Color frameColor)
+        public void Setup(string id, GameObject shapePrefab, Sprite animalSprite, Color frameColor)
         {
             Id = id;
-            figureShape.sprite = shapeSprite;
             animal.sprite = animalSprite;
-            frame.color = frameColor;
+            
+            var shape = Instantiate(shapePrefab, transform);
+            shape.GetComponent<SpriteRenderer>().color = frameColor;
         }
+        
+        public abstract Figure Clone();
     }
 }

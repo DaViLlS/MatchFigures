@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: FiguresConfig
   m_EditorClassIdentifier: 
   figures:
-  - figureType: 0
+  - shapeType: 0
     animalType: 0
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 0
+    colorType: {r: 0.9622642, g: 0.28595585, b: 0.56657284, a: 1}
+  - shapeType: 0
     animalType: 1
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 0
+    colorType: {r: 0.990566, g: 0.3504361, b: 0.3504361, a: 1}
+  - shapeType: 0
     animalType: 2
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 1
+    colorType: {r: 0.73224676, g: 0.972549, b: 0.38039213, a: 1}
+  - shapeType: 1
     animalType: 0
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 1
+    colorType: {r: 0.9607843, g: 0.28627452, b: 0.5647059, a: 1}
+  - shapeType: 1
     animalType: 1
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 1
+    colorType: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
+  - shapeType: 1
     animalType: 2
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 2
+    colorType: {r: 0.73333335, g: 0.972549, b: 0.38039216, a: 1}
+  - shapeType: 2
     animalType: 0
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 2
+    colorType: {r: 0.9607843, g: 0.28627452, b: 0.5647059, a: 1}
+  - shapeType: 2
     animalType: 1
-    colorType: {r: 1, g: 1, b: 1, a: 1}
-  - figureType: 2
+    colorType: {r: 0.99215686, g: 0.34901962, b: 0.34901962, a: 1}
+  - shapeType: 2
     animalType: 2
-    colorType: {r: 1, g: 1, b: 1, a: 1}
+    colorType: {r: 0.73333335, g: 0.972549, b: 0.38039216, a: 1}

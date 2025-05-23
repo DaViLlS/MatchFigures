@@ -1,12 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Figures
+namespace Figures.FigureStructure
 {
     [Serializable]
-    public class FigureSpritesContainer
+    public class ShapesContainer
     {
         public ShapeType shapeType;
-        public Sprite sprite;
+        public GameObject shapePrefab;
     }
 }
