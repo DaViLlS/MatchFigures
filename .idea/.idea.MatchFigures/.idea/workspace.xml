@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b68a8ff-3e2d-44a7-be69-86d87888281e" name="Changes" comment="" />
+    <list default="true" id="7b68a8ff-3e2d-44a7-be69-86d87888281e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenerationConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchFigures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchFigures/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,9 +22,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Figures/Figure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Figures/FigureType.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2xR6hAYheO62Lhorbq04XCWLlw0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,7 +34,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "figure-physics",
+    "git-widget-placeholder": "figures-generation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747888665661</updated>
       <workItem from="1747888681261" duration="4515000" />
+      <workItem from="1747978337666" duration="1151000" />
     </task>
     <servers />
   </component>
