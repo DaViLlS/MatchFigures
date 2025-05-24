@@ -41,6 +41,7 @@ namespace Figures
 
         private void HandleFigureClick(Figure figure)
         {
+            _currentFiguresCount--;
             _clickedFiguresCount++;
 
             if (!_figuresCounter.TryAdd(figure.Id, 1))
