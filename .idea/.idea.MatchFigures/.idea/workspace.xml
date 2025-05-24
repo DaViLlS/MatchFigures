@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b68a8ff-3e2d-44a7-be69-86d87888281e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FrozenFigure.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FrozenFigure.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/HeavyFigure.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/HeavyFigure.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MatchFigures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MatchFigures/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/Figures Registry.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Figures/Figures Registry.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/Figure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Figure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/Shape.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/Shape.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figures/FiguresCounter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +102,7 @@
       <workItem from="1747888681261" duration="4515000" />
       <workItem from="1747978337666" duration="25867000" />
       <workItem from="1748013260251" duration="12171000" />
-      <workItem from="1748063366379" duration="1829000" />
+      <workItem from="1748063366379" duration="2623000" />
     </task>
     <servers />
   </component>
