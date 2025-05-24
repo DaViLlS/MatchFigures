@@ -14,7 +14,6 @@ namespace Figures
         private void OnMouseUpAsButton()
         {
             OnClick?.Invoke();
-            Destroy(gameObject);
         }
     }
 }
