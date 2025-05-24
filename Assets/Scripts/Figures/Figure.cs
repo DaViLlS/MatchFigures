@@ -10,35 +10,36 @@ namespace Figures
         public event Action<Figure> OnClick;
         
         [SerializeField] private FigureUiView figureUIPrefab;
-        [SerializeField] private SpriteRenderer animal;
+        [SerializeField] protected SpriteRenderer animal;
         
-        private Shape _shape;
+        protected Shape Shape;
         
         public string Id { get; private set; }
         public FigureUiView FigureUiView { get; private set; }
 
-        public void Setup(string id, Sprite animalSprite, Shape shape)
+        public virtual void Setup(string id, Sprite animalSprite, Shape shape)
         {
             Id = id;
             animal.sprite = animalSprite;
-            _shape = shape;
+            Shape = shape;
             
             var shapeSpriteRenderer = shape.SpriteRenderer;
             FigureUiView = Instantiate(figureUIPrefab, GameCanvas.Instance.Canvas.transform);
             FigureUiView.Setup(shapeSpriteRenderer.sprite, animalSprite, shapeSpriteRenderer.color);
             FigureUiView.gameObject.SetActive(false);
 
-            _shape.OnClick += OnShapeClicked;
+            Shape.OnClick += OnShapeClicked;
         }
 
-        private void OnShapeClicked()
+        protected virtual void OnShapeClicked()
         {
             OnClick?.Invoke(this);
+            DestroyFigure();
         }
 
         public void DestroyFigure()
         {
-            Destroy(_shape.gameObject);
+            Destroy(Shape.gameObject);
         }
 
         public abstract Figure Clone();
